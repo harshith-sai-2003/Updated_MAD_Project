@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Onboarding</string>
+
+    //Headings
+    <string name="heading_one">Welcome!</string>
+    <string name="heading_two">Got a budding business but don\'t have enough funds?</string>
+    <string name="heading_three">Are you an investor who wants to improve their profile with new investments?</string>
+    <string name="heading_fourth">InvestSmart is the way to go.</string>
+
+    //Description
+    <string name="desc_one">Take a quick tour with us!</string>
+    <string name="desc_two">Register yourself as a Startup and find the right investor who can grow your company.</string>
+    <string name="desc_three">Register yourself as an Investor to invest in early stage startups and help them grow while simultaneously improving your profile.</string>
+    <string name="desc_fourth">We at InvestSmart help startups and investors connect and eliminate the hassle of finding the correct Investor/Entrepreneur who can resonate with your mindset.</string>
+
+</resources>
