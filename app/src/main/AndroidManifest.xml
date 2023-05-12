@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
         <activity
+            android:name=".signupInvestor"
+            android:exported="false" />
+        <activity
+            android:name=".signupStartup"
+            android:exported="false" />
+        <activity
             android:name=".investorDashboard"
             android:exported="false" />
         <activity

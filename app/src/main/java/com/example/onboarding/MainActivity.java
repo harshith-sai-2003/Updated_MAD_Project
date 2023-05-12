@@ -1,15 +1,22 @@
 package com.example.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
+import com.example.onboarding.data.MyDbHandler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +35,28 @@ public class MainActivity extends AppCompatActivity {
         backbtn = findViewById(R.id.backbtn);
         nextbtn = findViewById(R.id.nextbtn);
         skipbtn = findViewById(R.id.skipButton);
+
+        MyDbHandler db=new MyDbHandler(MainActivity.this);
+//        StartupClass s1=new StartupClass(6856,"MAHE","92732461","yourmom","We are MAHE");
+//        db.addContactStartup(s1);
+//
+//        StartupClass s2=new StartupClass(7127,"Convai","92732461","yourmom","We are Convai");
+//        db.addContactStartup(s2);
+//
+//        StartupClass s3=new StartupClass(8271,"Greenlight","92732461","yourmom","We are GreenLight");
+//        db.addContactStartup(s3);
+//
+//        StartupClass s4=new StartupClass(8712,"Arcesium","92732461","yourmom","We are Arcesium");
+//        db.addContactStartup(s4);
+
+        ArrayList<String> startups=new ArrayList<>();
+        //ListView listView=findViewById(R.id.listView);
+        //ConstraintLayout l=findViewById(R.id.);
+        List<StartupClass> list=db.getAllStartups();
+        for(StartupClass startup:list){
+            Log.d("yo","ID: "+startup.getReg_no()+" Name: "+startup.getCompany_name()+" Phone: "+startup.getPhone());
+            //contacts.add(contact.getName()+"("+contact.getPhone()+")");
+        }
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
