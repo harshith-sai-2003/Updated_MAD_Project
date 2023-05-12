@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
-        <activity android:name=".mainscreen"></activity>
+        <activity
+            android:name=".investorDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".startupDashboard"
+            android:exported="false" />
+        <activity android:name=".mainscreen" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

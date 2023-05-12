@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#ffffffff"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/cardview"
+            app:cardCornerRadius="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image1"
+                android:src="@drawable/image1">
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="Image 1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/cardview"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            tools:ignore="NotSibling"
+            android:id="@+id/tv1"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="6:26 PM"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/tv1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="75dp"
+            tools:ignore="NotSibling"
+            android:id="@+id/tv2"/>
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:text="Whats up?"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/cardview"
+            android:layout_below="@+id/tv1"
+            android:layout_marginLeft="20dp"
+            tools:ignore="NotSibling"
+            android:id="@+id/tv3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="___________________________________________________"
+            android:layout_marginTop="-5dp"
+            android:textColor="#CDC7C7"
+            android:layout_toRightOf="@+id/cardview"
+            android:layout_below="@+id/cardview"
+            android:layout_marginLeft="20dp"
+            tools:ignore="NotSibling"
+            android:id="@+id/tv4"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

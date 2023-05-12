@@ -12,5 +12,7 @@
     <string name="desc_two">Register yourself as a Startup and find the right investor who can grow your company.</string>
     <string name="desc_three">Register yourself as an Investor to invest in early stage startups and help them grow while simultaneously improving your profile.</string>
     <string name="desc_fourth">We at InvestSmart help startups and investors connect and eliminate the hassle of finding the correct Investor/Entrepreneur who can resonate with your mindset.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
