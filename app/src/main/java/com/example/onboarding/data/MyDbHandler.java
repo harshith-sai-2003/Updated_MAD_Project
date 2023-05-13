@@ -13,6 +13,7 @@ import com.example.onboarding.InvestorClass;
 import com.example.onboarding.ModelClass;
 import com.example.onboarding.StartupClass;
 import com.example.onboarding.params.Params;
+import com.example.onboarding.startup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ public class MyDbHandler extends SQLiteOpenHelper {
          query="CREATE TABLE "+Params.TABLE_NAME2+
                 "(" +Params.KEY_REG_NO2+" INTEGER PRIMARY KEY, "+
                 Params.NAME+" TEXT, "+
-                Params.KEY_INV_PASSWORD+" INTEGER, "+Params.KEY_EMAIL+" TEXT, "+Params.KEY_FIN_DESC+" TEXT);";
+                Params.KEY_INV_PASSWORD+" TEXT, "+Params.KEY_EMAIL+" TEXT, "+Params.KEY_FIN_DESC+" TEXT);";
         db.execSQL(query);
         Log.d("tables","tables created!");
     }
@@ -59,9 +60,9 @@ public class MyDbHandler extends SQLiteOpenHelper {
         values.put(Params.KEY_REG_NO2,contact.getReg_no());
         values.put(Params.NAME,contact.getName());
         values.put(Params.KEY_EMAIL,contact.getEmail());
-        values.put(Params.KEY_PASSWORD,contact.getPassword());
+        values.put(Params.KEY_INV_PASSWORD,contact.getPassword());
         values.put(Params.KEY_FIN_DESC,contact.getDescription());
-        db.insert(Params.TABLE_NAME,null,values);
+        db.insert(Params.TABLE_NAME2,null,values);
         db.close();
     }
 
@@ -81,6 +82,25 @@ public class MyDbHandler extends SQLiteOpenHelper {
             }while(cursor.moveToNext());
         }
         return startupList;
+    }
+
+    public List<InvestorClass> getAllInvestors(){
+        List<InvestorClass> investorList=new ArrayList<>();
+        SQLiteDatabase db=this.getReadableDatabase();
+        String select="SELECT * FROM "+Params.TABLE_NAME2;
+        Cursor cursor=db.rawQuery(select,null);
+        if(cursor.moveToFirst()){
+            do{
+                InvestorClass investor=new InvestorClass();
+                investor.setReg_no(Integer.parseInt(cursor.getString(0)));
+                investor.setName(cursor.getString(1));
+                investor.setEmail(cursor.getString(3));
+                investor.setPassword(cursor.getString(2));
+                investor.setDescription(cursor.getString(4));
+                investorList.add(investor);
+            }while(cursor.moveToNext());
+        }
+        return investorList;
     }
 
 }

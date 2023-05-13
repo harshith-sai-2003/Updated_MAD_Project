@@ -17,7 +17,7 @@ public class startupDashboard extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     List<ModelClass> userList;
-    List<StartupClass> startups;
+    List<InvestorClass> startups;
     Adapter adapter;
 
     @Override
@@ -44,10 +44,10 @@ public class startupDashboard extends AppCompatActivity {
 
         userList = new ArrayList<>();
         MyDbHandler db=new MyDbHandler(startupDashboard.this);
-        startups=db.getAllStartups();
+        startups=db.getAllInvestors();
 
-        for(StartupClass startup:startups){
-            userList.add(new ModelClass(R.drawable.image1,startup.getCompany_name(),startup.getDescription(),startup.getPhone(),"_____________________"));
+        for(InvestorClass startup:startups){
+            userList.add(new ModelClass(R.drawable.image1,startup.getName(),startup.getDescription(),startup.getEmail(),"_______________________________________"));
         }
 
 //        userList.add(new ModelClass(R.drawable.image1, "Company Logo", "6:54 PM", "Looking sick eh!", "_____________________"));

@@ -21,13 +21,13 @@
 
 
             <EditText
-                android:id="@+id/login_email"
+                android:id="@+id/startup_reg"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:drawablePadding="8dp"
-                android:hint="StartUp Name"
+                android:hint="StartUp Registration Number"
                 android:padding="8dp" />
 
             <EditText
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:text="Register" />
+                android:text="Register as a Startup?" />
 
         </LinearLayout>
 

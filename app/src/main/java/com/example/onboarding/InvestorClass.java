@@ -8,6 +8,9 @@ public class InvestorClass {
     private String password;
     private String description;
 
+    public InvestorClass() {
+    }
+
     public InvestorClass(int reg_no, String name, String email, String password, String description) {
         this.reg_no = reg_no;
         this.name = name;
